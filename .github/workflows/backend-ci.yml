@@ -19,7 +19,8 @@ jobs:
         with:
           version: "latest"
           enable-cache: true
-          python-version-file: backend/.python-version
+          python-version: backend/.python-version
+          cache-dependency-glob: backend/uv.lock
 
       - name: Install dependencies
         run: uv sync
